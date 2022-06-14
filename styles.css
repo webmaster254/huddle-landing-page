@@ -33,6 +33,7 @@ body {
   
   .hero-bar img {
     height: 1.875rem;
+    animation: moveInRight .7s ease-out ;
   }
   
   .hero-bar button {
@@ -56,10 +57,12 @@ body {
   .hero-info {
     display: flex;
     align-items: center;
+    
   }
   
   .hero-paragraph {
     margin-right: 5%;
+    animation: moveInRight .7s ease-out ;
   }
   
   .hero-paragraph h1 {
@@ -84,6 +87,7 @@ body {
   
   .hero-image {
     width: 150%;
+    animation: moveInLeft .7s ease-out ;
   }
   
   .hero-image img {
@@ -133,6 +137,12 @@ body {
   .card-image-left {
     flex: 1 1 475px;
     margin: 6% auto 6% 10%;
+
+  
+  }
+  .card-image-left .active{
+    animation: moveInRight .7s ease-out ;
+
   }
   
   .card-description-right {
@@ -441,3 +451,29 @@ body {
       text-align: center;
     }
   }
+
+  @keyframes moveInLeft{
+      0%{
+          opacity:0;
+          transform:translateX(50px);
+      }
+      50%{
+      }
+      100%{
+          opacity: 1;
+          transform: translateX(0);
+      }
+  }
+
+  @keyframes moveInRight{
+    0%{
+        opacity:0;
+        transform:translateX(-50px);
+    }
+    50%{
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
